@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(sub VERSION 1.0 DESCRIPTION "")
+find_package(harfbuzz REQUIRED)
+add_library(${PROJECT_NAME} STATIC sub.cpp)
+target_link_libraries(${PROJECT_NAME} harfbuzz::harfbuzz)

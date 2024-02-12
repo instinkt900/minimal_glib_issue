@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(test VERSION 1.0 DESCRIPTION "")
+add_subdirectory(nativefiledialog nativefiledialog)
+add_subdirectory(sub sub)
+add_executable(${PROJECT_NAME} test.cpp)
+target_link_libraries(${PROJECT_NAME} sub)
+target_link_libraries(${PROJECT_NAME} nativefiledialog)
